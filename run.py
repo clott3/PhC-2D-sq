@@ -108,7 +108,7 @@ def main(args):
     elif args.pol == 'TE':
         h5file = args.path_to_h5+'/sqTM-res64.h5'
     else:
-        raise ValueError("Polarization can only be TM or TM")
+        raise ValueError("Polarization can only be TM or TE")
 
     nsam = args.nsam # no. of samples
     input_size = 32 # downsize to 32x32 (default dataset is 64x64)

@@ -69,24 +69,3 @@ class PhCdata(data.Dataset):
         """
         ## input always first element in tuple and output always second element
         return self.x_data[index], self.y_data[index]
-
-# f = h5py.File('/home/charlotte/Desktop/PhC-2D-sq/DATA/sqTM-res64.h5','r')
-#
-# h5file = '/home/charlotte/Desktop/PhC-2D-sq/DATA/sqTM-res64.h5'
-# nsam = 2000
-# ntrain = int(0.7*nsam)
-# nvalid = int(0.15*nsam)
-# ntest = nsam - ntrain - nvalid
-# train_dataset = PhCdata(h5file, ntrain, nvalid, ntest,
-#                         split = 'train', nbands = 6, input_size = 32)
-#
-# train_dataloader = data.DataLoader(train_dataset, batch_size = 20,shuffle=True) # Define dataloader, shuffle every epoch
-#
-# for step, batch in enumerate(train_dataloader):
-#     print(batch[0].shape)
-#     print(batch[1].shape)
-
-# y = batch[1][0]
-# import matplotlib.pyplot as plt
-# y[:,0]
-# plt.plot(y[:,6])
